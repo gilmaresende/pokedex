@@ -9,7 +9,7 @@ import { tap, map } from 'rxjs';
 })
 export class PokeApiService {
   private numberFist: number = 0;
-  private amountPokemonsByPage: number = 150;
+  private amountPokemonsByPage: number = 10;
   private URL: string = `https://pokeapi.co/api/v2/pokemon?offset=${this.numberFist}&limit=${this.amountPokemonsByPage}`;
   constructor(private http: HttpClient) {}
 
