@@ -32,14 +32,14 @@ export class DetailsComponent implements OnInit {
     );
     const name = this.pokeApiService.apiGetPokemon(`${this.urlName}/${id}`);
 
-    return forkJoin([pokemon, name]).subscribe(
-      (res) => {
+    return forkJoin([pokemon, name]).subscribe({
+      next: (res) => {
         this.pokemon = res;
         this.isLoading = true;
       },
-      (error) => {
+      error: (error) => {
         this.apiError = true;
-      }
-    );
+      },
+    });
   }
 }
