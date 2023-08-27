@@ -9,12 +9,13 @@ import { tap, map } from 'rxjs';
 })
 export class PokeApiService {
   private numberFist: number = 0;
-  private amountPokemonsByPage: number = 10;
-  private URL: string = `https://pokeapi.co/api/v2/pokemon?offset=${this.numberFist}&limit=${this.amountPokemonsByPage}`;
+  private amountPokemonsByPage: number = 30;
+
   constructor(private http: HttpClient) {}
 
   get apiListAllPokemons(): Observable<any> {
-    return this.http.get<any>(this.URL).pipe(
+    const URL: string = `https://pokeapi.co/api/v2/pokemon?offset=${this.numberFist}&limit=${this.amountPokemonsByPage}`;
+    return this.http.get<any>(URL).pipe(
       tap((res) => res),
       tap((res) => {
         res.results.map((resPokemons: any) => {
@@ -28,5 +29,18 @@ export class PokeApiService {
 
   public apiGetPokemon(url: string): Observable<any> {
     return this.http.get<any>(url).pipe(map((res) => res));
+  }
+
+  public definirProximos() {
+    this.numberFist += this.amountPokemonsByPage;
+  }
+
+  public definirAnteriores(): boolean {
+    const temAnterior = this.numberFist - this.amountPokemonsByPage;
+    if (temAnterior >= 0) {
+      this.numberFist -= this.amountPokemonsByPage;
+      return true;
+    }
+    return false;
   }
 }

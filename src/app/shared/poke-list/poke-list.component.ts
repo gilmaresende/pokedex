@@ -15,6 +15,27 @@ export class PokeListComponent implements OnInit {
   constructor(private pokeApiService: PokeApiService) {}
 
   ngOnInit(): void {
+    this.loading();
+  }
+
+  search(value: string) {
+    const filter = this.setAllPokemon.filter((res: any) => {
+      return !res.name.indexOf(value.toLocaleLowerCase());
+    });
+    this.getAllPokemon = filter;
+  }
+
+  buscarProximos() {
+    this.pokeApiService.definirProximos();
+    this.loading();
+  }
+
+  buscarAnteriores() {
+    const temPagAnterior = this.pokeApiService.definirAnteriores();
+    if (temPagAnterior) this.loading();
+  }
+
+  loading() {
     this.pokeApiService.apiListAllPokemons.subscribe({
       next: (res) => {
         next: this.getAllPokemon = this.setAllPokemon = res.results;
@@ -23,12 +44,5 @@ export class PokeListComponent implements OnInit {
         error: this.apiError = true;
       },
     });
-  }
-
-  search(value: string) {
-    const filter = this.setAllPokemon.filter((res: any) => {
-      return !res.name.indexOf(value.toLocaleLowerCase());
-    });
-    this.getAllPokemon = filter;
   }
 }

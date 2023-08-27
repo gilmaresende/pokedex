@@ -1,6 +1,18 @@
 @import "../../../config-scss/rem-calc.scss";
 $padding: rem-calc(20);
 :host {
+  .divBackNext {
+    margin-bottom: rem-calc(25);
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: rem-calc(85);
+      height: rem-calc(30);
+      background: var(--branco);
+    }
+  }
+
   .listagem {
     display: flex;
     justify-content: space-between;
