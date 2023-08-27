@@ -1,27 +1,45 @@
 # Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Esta aplicação é um client para verificar informações sobre Pokemons.
 
-## Development server
+![art-pokedex](https://github.com/gilmaresende/pokedex/assets/45599661/5a27c89b-ba22-4356-8389-2131de43b60d)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## 🚀 Começando
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Faça o clone do repositório:
 
-## Build
+```
+https://github.com/gilmaresende/pokedex.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 📋 Pré-requisitos
 
-## Running unit tests
+Tenha as ferramentas intaladas em seu computador.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[Nodejs](https://nodejs.org/)
 
-## Running end-to-end tests
+[Angular CLI](https://github.com/angular/angular-cli)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 🔧 Instalação
 
-## Further help
+Após clonar o projeto, dentro do diretório principal execute o comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm i
+```
+
+Este comendo fará o download das dependências necessarias para executar a apliacação.
+
+## 🛠️ Recursos
+
+- [PokeApi](https://pokeapi.co/api/) - Api com informações dos Pokemons
+
+## ✒️ Autores
+
+- **Gilmar Fabiano** - [Aluno](https://github.com/gilmaresende)
+- **Dener Troquatte** - [Professor](https://github.com/troquatte)
+
+## Outras Informações
+
+Esta aplicação é um dos projetos do curso [Curso de Angular 2 (v15+) Typescript do Básico ao Avançado](https://www.udemy.com/course/curso-de-angular/) realizado na planaforma Udemy
