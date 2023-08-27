@@ -23,10 +23,15 @@ Tenha as ferramentas intaladas em seu computador.
 
 ### 🔧 Instalação
 
-Após clonar o projeto, dentro do diretório principal execute o comando:
+Após clonar o projeto, dentro do diretório principal, em um terminal execute o comando:
 
 ```
 npm i
+```
+Para executar o projeto, execute o comando:
+
+```
+ng serve
 ```
 
 Este comendo fará o download das dependências necessarias para executar a apliacação.
