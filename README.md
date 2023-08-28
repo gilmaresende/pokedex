@@ -34,7 +34,7 @@ Para executar o projeto, execute o comando:
 ng serve
 ```
 
-Este comendo fará o download das dependências necessarias para executar a apliacação.
+Este comando fará o download das dependências necessarias para executar a apliacação.
 
 ## 🛠️ Recursos
 
